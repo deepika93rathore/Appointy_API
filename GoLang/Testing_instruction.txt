@@ -1,0 +1,9 @@
+1. To update a driver's location, you can use the following curl command:
+curl -X PUT -H "Content-Type: application/json" -d '{"latitude":12.97161923,"longitude":77.59463452,"accuracy":0.7}' http://localhost:8080/drivers/1/location
+
+This will update the location of driver with ID 1 to the specified latitude and longitude.
+
+2. To find drivers in a given area, you can use the following curl command:
+curl "http://localhost:8080/drivers?latitude=12.97161923&longitude=77.59463452&radius=1000&limit=5"
+
+This will find up to 5 drivers within a 1000 meter radius of the specified latitude and longitude. Note that the radius and limit parameters are optional and will default to 500 meters and 10 drivers, respectively, if not specified.
